@@ -1,5 +1,6 @@
-package com.brianjmelton.foodtruckr;
+package com.brianjmelton.foodtruckr.detail;
 
+import com.brianjmelton.foodtruckr.R;
 import com.brianjmelton.foodtruckr.shared.detail.RestaurantDetailDelegate;
 import com.brianjmelton.foodtruckr.shared.detail.RestaurantDetailDispatch;
 
@@ -42,7 +43,7 @@ public class RestaurantDetailFragment extends Fragment implements RestaurantDeta
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
-        View rootView = inflater.inflate(R.layout.fragment_main, container, false);
+        View rootView = inflater.inflate(R.layout.fragment_list, container, false);
         return rootView;
     }
 

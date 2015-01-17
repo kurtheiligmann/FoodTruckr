@@ -1,22 +1,27 @@
 package com.brianjmelton.foodtruckr;
 
+import com.brianjmelton.foodtruckr.detail.RestaurantDetailFragment;
+import com.brianjmelton.foodtruckr.list.RestaurantListFragment;
 import com.brianjmelton.foodtruckr.shared.detail.RestaurantDetailDelegate;
 import com.brianjmelton.foodtruckr.shared.detail.RestaurantDetailDelegateImpl;
 import com.brianjmelton.foodtruckr.shared.detail.RestaurantDetailDispatch;
 import com.brianjmelton.foodtruckr.shared.list.RestaurantListDelegate;
 import com.brianjmelton.foodtruckr.shared.list.RestaurantListDelegateImpl;
 import com.brianjmelton.foodtruckr.shared.list.RestaurantListDispatch;
+import com.brianjmelton.foodtruckr.shared.vo.Calendar;
 
 import android.app.Activity;
 import android.os.Bundle;
 
 
-public class MainActivity extends Activity implements RestaurantListDelegate,
+public class MainActivity extends Activity implements RestaurantListFragment.Binder,
         RestaurantDetailDelegate, RestaurantListDispatch, RestaurantDetailFragment.Binder {
 
     protected RestaurantListDelegate mRestaurantListDelegate = new RestaurantListDelegateImpl(this);
 
     protected RestaurantDetailDelegate mRestaurantDetailDelegate;
+
+    protected Calendar mCalendar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,4 +57,13 @@ public class MainActivity extends Activity implements RestaurantListDelegate,
     }
 
 
+    @Override
+    public void setCalendar(Calendar calendar) {
+        mCalendar = calendar;
+    }
+
+    @Override
+    public Calendar getCalendar() {
+        return mCalendar;
+    }
 }
