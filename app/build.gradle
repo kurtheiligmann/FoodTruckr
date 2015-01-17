@@ -24,4 +24,5 @@ dependencies {
     compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
     compile 'com.squareup.okhttp:okhttp:2.0.0'
     compile 'com.squareup.retrofit:retrofit:1.9.0'
+    compile 'org.slf4j:slf4j-android:1.6.1-RC1'
 }

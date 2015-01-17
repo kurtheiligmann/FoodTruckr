@@ -94,4 +94,20 @@ public class Restaurant {
     public void setLongDescription(String longDescription) {
         this.longDescription = longDescription;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Restaurant{");
+        sb.append("name='").append(name).append('\'');
+        sb.append(", id=").append(id);
+        sb.append(", logo='").append(logo).append('\'');
+        sb.append(", background='").append(background).append('\'');
+        sb.append(", link='").append(link).append('\'');
+        sb.append(", cuisine='").append(cuisine).append('\'');
+        sb.append(", payment='").append(payment).append('\'');
+        sb.append(", shortDescription='").append(shortDescription).append('\'');
+        sb.append(", longDescription='").append(longDescription).append('\'');
+        sb.append('}');
+        return sb.toString();
+    }
 }

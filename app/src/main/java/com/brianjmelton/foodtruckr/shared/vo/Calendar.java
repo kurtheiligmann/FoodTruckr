@@ -54,4 +54,16 @@ public class Calendar {
     public void setFriday(Restaurant friday) {
         this.friday = friday;
     }
+
+    @Override
+    public String toString() {
+        final StringBuilder sb = new StringBuilder("Calendar{");
+        sb.append("monday=").append(monday);
+        sb.append(", tuesday=").append(tuesday);
+        sb.append(", wednesday=").append(wednesday);
+        sb.append(", thursday=").append(thursday);
+        sb.append(", friday=").append(friday);
+        sb.append('}');
+        return sb.toString();
+    }
 }
