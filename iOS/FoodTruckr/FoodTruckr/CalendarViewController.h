@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  CalendarViewController.h
 //  FoodTruckr
 //
 //  Created by Kurt Heiligmann on 1/17/15.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ViewController : UIViewController
-
+@interface CalendarViewController : UIViewController
 
 @end
-
