@@ -8,7 +8,9 @@
         android:layout_height="match_parent"
         card_view:cardCornerRadius="4dp"
         card_view:cardUseCompatPadding="true"
-        card_view:contentPadding="10dp">
+        card_view:contentPadding="10dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        android:clickable="true">
 
     <LinearLayout
             android:layout_width="match_parent"
@@ -41,7 +43,7 @@
                       android:text="Monday" android:id="@+id/small_label"/>
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:padding="10dp" android:fontFamily="sans-serif-thin"
+                      android:padding="10dp"
                       android:textSize="20sp"
                       android:text="Bacon ipsum dolor amet beef ribs bresaola ball tip, capicola alcatra swine strip steak pig short ribs pancetta tongue rump hamburger jerky brisket. Fatback swine pork strip steak pastrami sausage venison biltong turkey doner. "
                       android:id="@+id/card_text"/>
