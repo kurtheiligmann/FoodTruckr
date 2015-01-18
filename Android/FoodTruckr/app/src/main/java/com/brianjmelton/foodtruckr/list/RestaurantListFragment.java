@@ -1,11 +1,11 @@
 package com.brianjmelton.foodtruckr.list;
 
-import com.brianjmelton.foodtruckr.view.AbstractViews;
 import com.brianjmelton.foodtruckr.R;
 import com.brianjmelton.foodtruckr.io.Calendar;
 import com.brianjmelton.foodtruckr.io.RestAdapter;
 import com.brianjmelton.foodtruckr.log.LoggingEnabled;
 import com.brianjmelton.foodtruckr.shared.list.RestaurantListDelegate;
+import com.brianjmelton.foodtruckr.view.AbstractViews;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -55,10 +55,16 @@ public class RestaurantListFragment extends Fragment
             mLayoutManager = new LinearLayoutManager(getActivity());
             mRecyclerView.setLayoutManager(mLayoutManager);
 
+            // add a click listener
+            mRecyclerView.addOnItemTouchListener(
+                    new RecyclerItemClickListener(getActivity(), mBinder)
+            );
+
             // TODO show a spinner while you wait!
 
             return layout;
         }
+
     }
 
     public RestaurantListFragment() {
@@ -113,10 +119,12 @@ public class RestaurantListFragment extends Fragment
     /**
      * This {@link android.app.Fragment}'s Binder interface
      */
-    public static interface Binder extends RestaurantListDelegate {
+    public static interface Binder
+            extends RestaurantListDelegate, RecyclerItemClickListener.OnItemClickListener {
 
         public void setCalendar(com.brianjmelton.foodtruckr.shared.vo.Calendar calendar);
 
         public com.brianjmelton.foodtruckr.shared.vo.Calendar getCalendar();
+
     }
 }

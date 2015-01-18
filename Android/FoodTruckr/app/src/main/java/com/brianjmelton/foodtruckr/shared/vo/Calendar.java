@@ -1,9 +1,11 @@
 package com.brianjmelton.foodtruckr.shared.vo;
 
+import java.io.Serializable;
+
 /**
  * Created by brianmelton on 1/16/15.
  */
-public class Calendar {
+public class Calendar implements Serializable {
 
     private Restaurant monday;
 
