@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>8F20DEAB-8A95-49E2-A8D2-268DC5A507E6</string>
+	<key>IDESourceControlProjectName</key>
+	<string>FoodTruckr</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>FB5CECFBAB79C61E5B6E280CA1590EB8E7661915</key>
+		<string>https://github.com/kurtheiligmann/FoodTruckr.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>iOS/FoodTruckr/FoodTruckr.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>FB5CECFBAB79C61E5B6E280CA1590EB8E7661915</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/kurtheiligmann/FoodTruckr.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>FB5CECFBAB79C61E5B6E280CA1590EB8E7661915</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>FB5CECFBAB79C61E5B6E280CA1590EB8E7661915</string>
+			<key>IDESourceControlWCCName</key>
+			<string>FoodTruckr</string>
+		</dict>
+	</array>
+</dict>
+</plist>
