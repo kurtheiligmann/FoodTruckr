@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:orientation="vertical"
+              android:weightSum="3"
+              android:layout_height="match_parent">
+
+    <ImageView android:layout_width="match_parent" android:layout_height="0dp"
+               android:src="@drawable/pizza" android:scaleType="fitXY"
+               android:layout_weight="1"/>
+
+    <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                  android:orientation="vertical"
+                  android:layout_weight="2">
+
+        <LinearLayout android:layout_width="match_parent"
+                      android:layout_height="wrap_content"
+                      android:paddingLeft="40dp"
+                      android:paddingTop="25dp"
+                      android:paddingBottom="25dp"
+                      android:paddingRight="40dp"
+                      android:background="@color/mhe_red"
+                      android:orientation="vertical">
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:textColor="@color/white"
+                      android:textSize="20sp"
+                      android:text="Le restaurant Faux"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:paddingTop="8dp" android:textSize="14sp"
+                      android:textColor="@color/white"
+                      android:fontFamily="sans-serif-thin"
+                      android:text="Mon. 11:00 - 2:30 PM"/>
+
+        </LinearLayout>
+
+        <TextView android:layout_width="match_parent" android:paddingTop="10dp"
+                  android:paddingLeft="40dp"
+                  android:paddingRight="20dp"
+                  android:layout_height="wrap_content"
+                  android:text="Bacon ipsum dolor amet tri-tip cow porchetta, chuck pork chop pork loin ball tip andouille shoulder filet mignon tail chicken bresaola jerky. Doner turducken swine flank, fatback meatloaf filet mignon beef boudin andouille pig ground round. Doner jowl bresaola meatloaf ribeye, meatball t-bone. Filet mignon frankfurter jowl fatback sausage ball tip. Beef ribs shoulder bresaola pancetta filet mignon, tongue shankle pork chop prosciutto hamburger."/>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_marginTop="20dp"
+                      android:layout_marginRight="20dp" android:layout_marginLeft="40dp"
+                      android:layout_height="1dp" android:background="#A8000000"/>
+
+        <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                  android:paddingTop="10dp"
+                  android:text="Visit Website" android:textSize="20sp" android:paddingLeft="40dp"/>
+
+    </LinearLayout>
+
+</LinearLayout>

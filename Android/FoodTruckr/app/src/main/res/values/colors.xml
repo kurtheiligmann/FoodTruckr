@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="mhe_translucent" type="color">#88DC001C</item>
+    <item name="mhe_red" type="color">#FFDC001C</item>
+    <item name="mhe_darker" type="color">#FFBE001C</item>
+    <item name="white" type="color">#FFFFFFFF</item>
+</resources>
