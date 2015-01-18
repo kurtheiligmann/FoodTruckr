@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/card_view"
+        android:layout_width="match_parent"
+        card_view:cardElevation="4dp"
+        android:layout_height="match_parent"
+        card_view:cardCornerRadius="4dp"
+        card_view:cardUseCompatPadding="true"
+        card_view:contentPadding="10dp">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:layout_height="match_parent">
+
+        <RelativeLayout android:layout_width="match_parent"
+                        android:layout_height="0dp" android:layout_weight="1">
+
+            <ImageView android:layout_width="match_parent" android:layout_height="match_parent"
+                       android:scaleType="fitXY" android:src="@drawable/pizza"
+                       android:id="@+id/background"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:background="#A0A9A9A9"
+                      android:layout_alignParentBottom="true" android:gravity="center_horizontal"
+                      android:text="Le restaurant Faux"
+                      android:textSize="24sp" android:padding="10dp"
+                      android:textColor="#CCFFFFFF" android:id="@+id/large_label"/>
+
+        </RelativeLayout>
+
+        <LinearLayout android:layout_width="match_parent" android:layout_height="0dp"
+                      android:orientation="vertical"
+                      android:layout_weight="1">
+
+            <TextView android:layout_width="match_parent" android:padding="5dp"
+                      android:layout_height="wrap_content" android:gravity="right"
+                      android:text="Monday" android:id="@+id/small_label"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                      android:padding="10dp" android:fontFamily="sans-serif-thin"
+                      android:text="Bacon ipsum dolor amet beef ribs bresaola ball tip, capicola alcatra swine strip steak pig short ribs pancetta tongue rump hamburger jerky brisket. Fatback swine pork strip steak pastrami sausage venison biltong turkey doner. "
+                      android:id="@+id/card_text"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+</android.support.v7.widget.CardView>
