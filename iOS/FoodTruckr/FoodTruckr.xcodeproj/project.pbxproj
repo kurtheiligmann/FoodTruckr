@@ -8,13 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		5528BC891A6B80E000BAC63F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BC881A6B80E000BAC63F /* main.m */; };
-		5528BC8C1A6B80E000BAC63F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BC8B1A6B80E000BAC63F /* AppDelegate.m */; };
 		5528BC921A6B80E000BAC63F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5528BC901A6B80E000BAC63F /* Main.storyboard */; };
 		5528BC941A6B80E100BAC63F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5528BC931A6B80E100BAC63F /* Images.xcassets */; };
 		5528BC971A6B80E100BAC63F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5528BC951A6B80E100BAC63F /* LaunchScreen.xib */; };
 		5528BCA31A6B80E100BAC63F /* FoodTruckrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCA21A6B80E100BAC63F /* FoodTruckrTests.m */; };
-		5528BCAE1A6B91CE00BAC63F /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCAD1A6B91CE00BAC63F /* CalendarViewController.m */; };
-		5528BCB11A6B930200BAC63F /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCB01A6B930200BAC63F /* DataController.m */; };
+		5528BCD61A6B9BDB00BAC63F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCBC1A6B9BDB00BAC63F /* AppDelegate.m */; };
+		5528BCD71A6B9BDB00BAC63F /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCBF1A6B9BDB00BAC63F /* DataController.m */; };
+		5528BCDD1A6B9BDB00BAC63F /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCD51A6B9BDB00BAC63F /* CalendarViewController.m */; };
+		5528BCDF1A6B9C3100BAC63F /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 5528BCDE1A6B9C3100BAC63F /* Shared */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,18 +32,19 @@
 		5528BC831A6B80E000BAC63F /* FoodTruckr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruckr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5528BC871A6B80E000BAC63F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5528BC881A6B80E000BAC63F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		5528BC8A1A6B80E000BAC63F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
-		5528BC8B1A6B80E000BAC63F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		5528BC911A6B80E000BAC63F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5528BC931A6B80E100BAC63F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		5528BC961A6B80E100BAC63F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
 		5528BC9C1A6B80E100BAC63F /* FoodTruckrTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = FoodTruckrTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5528BCA11A6B80E100BAC63F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5528BCA21A6B80E100BAC63F /* FoodTruckrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodTruckrTests.m; sourceTree = "<group>"; };
-		5528BCAC1A6B91CE00BAC63F /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
-		5528BCAD1A6B91CE00BAC63F /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
-		5528BCAF1A6B930200BAC63F /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
-		5528BCB01A6B930200BAC63F /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		5528BCBB1A6B9BDB00BAC63F /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = Classes/AppDelegate.h; sourceTree = "<group>"; };
+		5528BCBC1A6B9BDB00BAC63F /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = Classes/AppDelegate.m; sourceTree = "<group>"; };
+		5528BCBE1A6B9BDB00BAC63F /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
+		5528BCBF1A6B9BDB00BAC63F /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
+		5528BCD41A6B9BDB00BAC63F /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
+		5528BCD51A6B9BDB00BAC63F /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		5528BCDE1A6B9C3100BAC63F /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Shared; path = Classes/Shared; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,16 +86,15 @@
 		5528BC851A6B80E000BAC63F /* FoodTruckr */ = {
 			isa = PBXGroup;
 			children = (
-				5528BC8A1A6B80E000BAC63F /* AppDelegate.h */,
-				5528BC8B1A6B80E000BAC63F /* AppDelegate.m */,
-				5528BCAC1A6B91CE00BAC63F /* CalendarViewController.h */,
-				5528BCAD1A6B91CE00BAC63F /* CalendarViewController.m */,
-				5528BCAF1A6B930200BAC63F /* DataController.h */,
-				5528BCB01A6B930200BAC63F /* DataController.m */,
+				5528BCDE1A6B9C3100BAC63F /* Shared */,
+				5528BCBB1A6B9BDB00BAC63F /* AppDelegate.h */,
+				5528BCBC1A6B9BDB00BAC63F /* AppDelegate.m */,
+				5528BCBD1A6B9BDB00BAC63F /* Data */,
 				5528BC931A6B80E100BAC63F /* Images.xcassets */,
 				5528BC951A6B80E100BAC63F /* LaunchScreen.xib */,
 				5528BC901A6B80E000BAC63F /* Main.storyboard */,
 				5528BC861A6B80E000BAC63F /* Supporting Files */,
+				5528BCD31A6B9BDB00BAC63F /* ViewControllers */,
 			);
 			path = FoodTruckr;
 			sourceTree = "<group>";
@@ -122,6 +123,26 @@
 				5528BCA11A6B80E100BAC63F /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5528BCBD1A6B9BDB00BAC63F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				5528BCBE1A6B9BDB00BAC63F /* DataController.h */,
+				5528BCBF1A6B9BDB00BAC63F /* DataController.m */,
+			);
+			name = Data;
+			path = Classes/Data;
+			sourceTree = "<group>";
+		};
+		5528BCD31A6B9BDB00BAC63F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				5528BCD41A6B9BDB00BAC63F /* CalendarViewController.h */,
+				5528BCD51A6B9BDB00BAC63F /* CalendarViewController.m */,
+			);
+			name = ViewControllers;
+			path = Classes/ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -205,6 +226,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5528BC921A6B80E000BAC63F /* Main.storyboard in Resources */,
+				5528BCDF1A6B9C3100BAC63F /* Shared in Resources */,
 				5528BC971A6B80E100BAC63F /* LaunchScreen.xib in Resources */,
 				5528BC941A6B80E100BAC63F /* Images.xcassets in Resources */,
 			);
@@ -224,10 +246,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5528BCAE1A6B91CE00BAC63F /* CalendarViewController.m in Sources */,
-				5528BCB11A6B930200BAC63F /* DataController.m in Sources */,
-				5528BC8C1A6B80E000BAC63F /* AppDelegate.m in Sources */,
+				5528BCDD1A6B9BDB00BAC63F /* CalendarViewController.m in Sources */,
+				5528BCD61A6B9BDB00BAC63F /* AppDelegate.m in Sources */,
 				5528BC891A6B80E000BAC63F /* main.m in Sources */,
+				5528BCD71A6B9BDB00BAC63F /* DataController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -351,8 +373,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/kurtheiligmann/j2objc-0.9.5/include",
+				);
 				INFOPLIST_FILE = FoodTruckr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "/Users/kurtheiligmann/j2objc-0.9.5/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -361,8 +389,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
+					"/Users/kurtheiligmann/j2objc-0.9.5/include",
+				);
 				INFOPLIST_FILE = FoodTruckr/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = "/Users/kurtheiligmann/j2objc-0.9.5/lib";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
