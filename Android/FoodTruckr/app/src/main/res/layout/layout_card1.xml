@@ -24,10 +24,10 @@
                        android:id="@+id/background"/>
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
-                      android:background="#A0A9A9A9"
+                      android:background="@color/mhe_translucent"
                       android:layout_alignParentBottom="true" android:gravity="center_horizontal"
                       android:text="Le restaurant Faux"
-                      android:textSize="24sp" android:padding="10dp"
+                      android:textSize="30sp" android:padding="10dp"
                       android:textColor="#CCFFFFFF" android:id="@+id/large_label"/>
 
         </RelativeLayout>
@@ -42,6 +42,7 @@
 
             <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
                       android:padding="10dp" android:fontFamily="sans-serif-thin"
+                      android:textSize="20sp"
                       android:text="Bacon ipsum dolor amet beef ribs bresaola ball tip, capicola alcatra swine strip steak pig short ribs pancetta tongue rump hamburger jerky brisket. Fatback swine pork strip steak pastrami sausage venison biltong turkey doner. "
                       android:id="@+id/card_text"/>
 
