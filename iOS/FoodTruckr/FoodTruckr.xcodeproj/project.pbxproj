@@ -14,6 +14,7 @@
 		5528BC971A6B80E100BAC63F /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5528BC951A6B80E100BAC63F /* LaunchScreen.xib */; };
 		5528BCA31A6B80E100BAC63F /* FoodTruckrTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCA21A6B80E100BAC63F /* FoodTruckrTests.m */; };
 		5528BCAE1A6B91CE00BAC63F /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCAD1A6B91CE00BAC63F /* CalendarViewController.m */; };
+		5528BCB11A6B930200BAC63F /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCB01A6B930200BAC63F /* DataController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,6 +41,8 @@
 		5528BCA21A6B80E100BAC63F /* FoodTruckrTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FoodTruckrTests.m; sourceTree = "<group>"; };
 		5528BCAC1A6B91CE00BAC63F /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		5528BCAD1A6B91CE00BAC63F /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		5528BCAF1A6B930200BAC63F /* DataController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataController.h; sourceTree = "<group>"; };
+		5528BCB01A6B930200BAC63F /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,8 @@
 				5528BC8B1A6B80E000BAC63F /* AppDelegate.m */,
 				5528BCAC1A6B91CE00BAC63F /* CalendarViewController.h */,
 				5528BCAD1A6B91CE00BAC63F /* CalendarViewController.m */,
+				5528BCAF1A6B930200BAC63F /* DataController.h */,
+				5528BCB01A6B930200BAC63F /* DataController.m */,
 				5528BC931A6B80E100BAC63F /* Images.xcassets */,
 				5528BC951A6B80E100BAC63F /* LaunchScreen.xib */,
 				5528BC901A6B80E000BAC63F /* Main.storyboard */,
@@ -220,6 +225,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5528BCAE1A6B91CE00BAC63F /* CalendarViewController.m in Sources */,
+				5528BCB11A6B930200BAC63F /* DataController.m in Sources */,
 				5528BC8C1A6B80E000BAC63F /* AppDelegate.m in Sources */,
 				5528BC891A6B80E000BAC63F /* main.m in Sources */,
 			);

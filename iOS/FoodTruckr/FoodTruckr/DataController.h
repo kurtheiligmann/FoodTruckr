@@ -10,4 +10,6 @@
 
 @interface DataController : NSObject
 
++ (NSArray *)getFoodTrucks;
+
 @end
