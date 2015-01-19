@@ -14,6 +14,8 @@ import org.slf4j.LoggerFactory;
 
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -132,12 +134,15 @@ public class RestaurantDetailFragment extends Fragment implements RestaurantDeta
     }
 
     @Override
-    public void onDisplayLink(long id) {
+    public void onDisplayLink(final long id) {
         getLogger().info("^onDisplayLink(id={})", id);
         mViews.mWebsite.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                // Kick it to a browser
+                String url = forId(id).getLink();
+                Intent browserIntent = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                startActivity(browserIntent);
             }
         });
         getLogger().info("$onDisplayLink(id={})", id);
