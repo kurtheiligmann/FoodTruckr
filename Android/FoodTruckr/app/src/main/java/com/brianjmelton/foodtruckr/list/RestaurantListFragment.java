@@ -91,6 +91,13 @@ public class RestaurantListFragment extends Fragment
     }
 
     @Override
+    public void onResume() {
+        super.onResume();
+        setHasOptionsMenu(false);
+        getActivity().getActionBar().setDisplayHomeAsUpEnabled(false);
+    }
+
+    @Override
     public Logger getLogger() {
         return LoggerFactory.getLogger(RestaurantListFragment.class);
     }
