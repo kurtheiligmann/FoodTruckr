@@ -65,7 +65,7 @@ public class MainActivity extends Activity implements RestaurantListFragment.Bin
     public void onShowRestaurantDetail(long id) {
         // do a FragmentTransaction
         getFragmentManager().beginTransaction()
-                .replace(R.id.container, RestaurantDetailFragment.newInstance(id))
+                .replace(R.id.container, RestaurantDetailFragment.newInstance(mCalendar, id))
                 .addToBackStack(null).commit();
     }
 
