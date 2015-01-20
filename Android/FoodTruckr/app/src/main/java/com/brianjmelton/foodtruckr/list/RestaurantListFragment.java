@@ -4,7 +4,7 @@ import com.brianjmelton.foodtruckr.R;
 import com.brianjmelton.foodtruckr.io.Calendar;
 import com.brianjmelton.foodtruckr.io.RestAdapter;
 import com.brianjmelton.foodtruckr.log.LoggingEnabled;
-import com.brianjmelton.foodtruckr.shared.list.RestaurantListDelegate;
+import com.brianjmelton.foodtruckr.shared.RestaurantListDelegate;
 import com.brianjmelton.foodtruckr.view.AbstractViews;
 
 import org.slf4j.Logger;
@@ -28,7 +28,7 @@ import retrofit.client.Response;
  * Created by brianmelton on 1/16/15.
  */
 public class RestaurantListFragment extends Fragment
-        implements Callback<com.brianjmelton.foodtruckr.shared.vo.Calendar>, LoggingEnabled {
+        implements Callback<com.brianjmelton.foodtruckr.shared.Calendar>, LoggingEnabled {
 
     protected Binder mBinder;
 
@@ -106,7 +106,7 @@ public class RestaurantListFragment extends Fragment
     // Network I/O
     //
     @Override
-    public void success(com.brianjmelton.foodtruckr.shared.vo.Calendar calendar,
+    public void success(com.brianjmelton.foodtruckr.shared.Calendar calendar,
             Response response) {
         mBinder.setCalendar(calendar);
         mViews.mAdapter = new RestaurantListAdapter(calendar);
@@ -129,9 +129,9 @@ public class RestaurantListFragment extends Fragment
     public static interface Binder
             extends RestaurantListDelegate, RecyclerItemClickListener.OnItemClickListener {
 
-        public void setCalendar(com.brianjmelton.foodtruckr.shared.vo.Calendar calendar);
+        public void setCalendar(com.brianjmelton.foodtruckr.shared.Calendar calendar);
 
-        public com.brianjmelton.foodtruckr.shared.vo.Calendar getCalendar();
+        public com.brianjmelton.foodtruckr.shared.Calendar getCalendar();
 
     }
 }
