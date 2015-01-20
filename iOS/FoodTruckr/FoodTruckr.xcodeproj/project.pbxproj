@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4599E32A1A6EC1A50029B065 /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4599E3291A6EC1A50029B065 /* libz.dylib */; };
+		4599E32C1A6EC1AC0029B065 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4599E32B1A6EC1AC0029B065 /* Security.framework */; };
+		4599E32E1A6EC1BA0029B065 /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4599E32D1A6EC1BA0029B065 /* libicucore.dylib */; };
+		4599E3371A6EC23C0029B065 /* RestaurantDetailDelegate.java in Sources */ = {isa = PBXBuildFile; fileRef = 4599E32F1A6EC23C0029B065 /* RestaurantDetailDelegate.java */; };
+		4599E3381A6EC23C0029B065 /* RestaurantDetailDelegateImpl.java in Sources */ = {isa = PBXBuildFile; fileRef = 4599E3301A6EC23C0029B065 /* RestaurantDetailDelegateImpl.java */; };
+		4599E3391A6EC23C0029B065 /* RestaurantDetailDispatch.java in Sources */ = {isa = PBXBuildFile; fileRef = 4599E3311A6EC23C0029B065 /* RestaurantDetailDispatch.java */; };
+		4599E33A1A6EC23C0029B065 /* RestaurantListDelegate.java in Sources */ = {isa = PBXBuildFile; fileRef = 4599E3321A6EC23C0029B065 /* RestaurantListDelegate.java */; };
+		4599E33B1A6EC23C0029B065 /* RestaurantListDelegateImpl.java in Sources */ = {isa = PBXBuildFile; fileRef = 4599E3331A6EC23C0029B065 /* RestaurantListDelegateImpl.java */; };
+		4599E33C1A6EC23C0029B065 /* RestaurantListDispatch.java in Sources */ = {isa = PBXBuildFile; fileRef = 4599E3341A6EC23C0029B065 /* RestaurantListDispatch.java */; };
+		4599E33D1A6EC23C0029B065 /* Calendar.java in Sources */ = {isa = PBXBuildFile; fileRef = 4599E3351A6EC23C0029B065 /* Calendar.java */; };
+		4599E33E1A6EC23C0029B065 /* Restaurant.java in Sources */ = {isa = PBXBuildFile; fileRef = 4599E3361A6EC23C0029B065 /* Restaurant.java */; };
 		5528BC891A6B80E000BAC63F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BC881A6B80E000BAC63F /* main.m */; };
 		5528BC921A6B80E000BAC63F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5528BC901A6B80E000BAC63F /* Main.storyboard */; };
 		5528BC941A6B80E100BAC63F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5528BC931A6B80E100BAC63F /* Images.xcassets */; };
@@ -15,8 +26,21 @@
 		5528BCD61A6B9BDB00BAC63F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCBC1A6B9BDB00BAC63F /* AppDelegate.m */; };
 		5528BCD71A6B9BDB00BAC63F /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCBF1A6B9BDB00BAC63F /* DataController.m */; };
 		5528BCDD1A6B9BDB00BAC63F /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCD51A6B9BDB00BAC63F /* CalendarViewController.m */; };
-		5528BCDF1A6B9C3100BAC63F /* Shared in Resources */ = {isa = PBXBuildFile; fileRef = 5528BCDE1A6B9C3100BAC63F /* Shared */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXBuildRule section */
+		4599E3141A6EBFC10029B065 /* PBXBuildRule */ = {
+			isa = PBXBuildRule;
+			compilerSpec = com.apple.compilers.proxy.script;
+			fileType = sourcecode.java;
+			isEditable = 1;
+			outputFiles = (
+				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.h",
+				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.m",
+			);
+			script = "/Users/kurt/j2objc-0.9.5/j2objc -d ${DERIVED_FILES_DIR} -sourcepath /Users/kurt/Documents/Projects/FoodTruckr/Android/FoodTruckr/app/src/main/java/com/brianjmelton/foodtruckr/shared \\ --no-package-directories ${INPUT_FILE_PATH};";
+		};
+/* End PBXBuildRule section */
 
 /* Begin PBXContainerItemProxy section */
 		5528BC9D1A6B80E100BAC63F /* PBXContainerItemProxy */ = {
@@ -29,6 +53,17 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4599E3291A6EC1A50029B065 /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4599E32B1A6EC1AC0029B065 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		4599E32D1A6EC1BA0029B065 /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		4599E32F1A6EC23C0029B065 /* RestaurantDetailDelegate.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = RestaurantDetailDelegate.java; path = ../../../Android/FoodTruckr/app/src/main/java/com/brianjmelton/foodtruckr/shared/detail/RestaurantDetailDelegate.java; sourceTree = "<group>"; };
+		4599E3301A6EC23C0029B065 /* RestaurantDetailDelegateImpl.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = RestaurantDetailDelegateImpl.java; path = ../../../Android/FoodTruckr/app/src/main/java/com/brianjmelton/foodtruckr/shared/detail/RestaurantDetailDelegateImpl.java; sourceTree = "<group>"; };
+		4599E3311A6EC23C0029B065 /* RestaurantDetailDispatch.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = RestaurantDetailDispatch.java; path = ../../../Android/FoodTruckr/app/src/main/java/com/brianjmelton/foodtruckr/shared/detail/RestaurantDetailDispatch.java; sourceTree = "<group>"; };
+		4599E3321A6EC23C0029B065 /* RestaurantListDelegate.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = RestaurantListDelegate.java; path = ../../../Android/FoodTruckr/app/src/main/java/com/brianjmelton/foodtruckr/shared/list/RestaurantListDelegate.java; sourceTree = "<group>"; };
+		4599E3331A6EC23C0029B065 /* RestaurantListDelegateImpl.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = RestaurantListDelegateImpl.java; path = ../../../Android/FoodTruckr/app/src/main/java/com/brianjmelton/foodtruckr/shared/list/RestaurantListDelegateImpl.java; sourceTree = "<group>"; };
+		4599E3341A6EC23C0029B065 /* RestaurantListDispatch.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = RestaurantListDispatch.java; path = ../../../Android/FoodTruckr/app/src/main/java/com/brianjmelton/foodtruckr/shared/list/RestaurantListDispatch.java; sourceTree = "<group>"; };
+		4599E3351A6EC23C0029B065 /* Calendar.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = Calendar.java; path = ../../../Android/FoodTruckr/app/src/main/java/com/brianjmelton/foodtruckr/shared/vo/Calendar.java; sourceTree = "<group>"; };
+		4599E3361A6EC23C0029B065 /* Restaurant.java */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.java; name = Restaurant.java; path = ../../../Android/FoodTruckr/app/src/main/java/com/brianjmelton/foodtruckr/shared/vo/Restaurant.java; sourceTree = "<group>"; };
 		5528BC831A6B80E000BAC63F /* FoodTruckr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FoodTruckr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5528BC871A6B80E000BAC63F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5528BC881A6B80E000BAC63F /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -44,7 +79,6 @@
 		5528BCBF1A6B9BDB00BAC63F /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
 		5528BCD41A6B9BDB00BAC63F /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		5528BCD51A6B9BDB00BAC63F /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
-		5528BCDE1A6B9C3100BAC63F /* Shared */ = {isa = PBXFileReference; lastKnownFileType = folder; name = Shared; path = Classes/Shared; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4599E32E1A6EC1BA0029B065 /* libicucore.dylib in Frameworks */,
+				4599E32C1A6EC1AC0029B065 /* Security.framework in Frameworks */,
+				4599E32A1A6EC1A50029B065 /* libz.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,6 +105,9 @@
 		5528BC7A1A6B80E000BAC63F = {
 			isa = PBXGroup;
 			children = (
+				4599E32D1A6EC1BA0029B065 /* libicucore.dylib */,
+				4599E32B1A6EC1AC0029B065 /* Security.framework */,
+				4599E3291A6EC1A50029B065 /* libz.dylib */,
 				5528BC851A6B80E000BAC63F /* FoodTruckr */,
 				5528BC9F1A6B80E100BAC63F /* FoodTruckrTests */,
 				5528BC841A6B80E000BAC63F /* Products */,
@@ -86,7 +126,14 @@
 		5528BC851A6B80E000BAC63F /* FoodTruckr */ = {
 			isa = PBXGroup;
 			children = (
-				5528BCDE1A6B9C3100BAC63F /* Shared */,
+				4599E32F1A6EC23C0029B065 /* RestaurantDetailDelegate.java */,
+				4599E3301A6EC23C0029B065 /* RestaurantDetailDelegateImpl.java */,
+				4599E3311A6EC23C0029B065 /* RestaurantDetailDispatch.java */,
+				4599E3321A6EC23C0029B065 /* RestaurantListDelegate.java */,
+				4599E3331A6EC23C0029B065 /* RestaurantListDelegateImpl.java */,
+				4599E3341A6EC23C0029B065 /* RestaurantListDispatch.java */,
+				4599E3351A6EC23C0029B065 /* Calendar.java */,
+				4599E3361A6EC23C0029B065 /* Restaurant.java */,
 				5528BCBB1A6B9BDB00BAC63F /* AppDelegate.h */,
 				5528BCBC1A6B9BDB00BAC63F /* AppDelegate.m */,
 				5528BCBD1A6B9BDB00BAC63F /* Data */,
@@ -157,6 +204,7 @@
 				5528BC811A6B80E000BAC63F /* Resources */,
 			);
 			buildRules = (
+				4599E3141A6EBFC10029B065 /* PBXBuildRule */,
 			);
 			dependencies = (
 			);
@@ -226,7 +274,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				5528BC921A6B80E000BAC63F /* Main.storyboard in Resources */,
-				5528BCDF1A6B9C3100BAC63F /* Shared in Resources */,
 				5528BC971A6B80E100BAC63F /* LaunchScreen.xib in Resources */,
 				5528BC941A6B80E100BAC63F /* Images.xcassets in Resources */,
 			);
@@ -246,10 +293,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4599E33E1A6EC23C0029B065 /* Restaurant.java in Sources */,
+				4599E33B1A6EC23C0029B065 /* RestaurantListDelegateImpl.java in Sources */,
+				4599E3381A6EC23C0029B065 /* RestaurantDetailDelegateImpl.java in Sources */,
+				4599E3391A6EC23C0029B065 /* RestaurantDetailDispatch.java in Sources */,
 				5528BCDD1A6B9BDB00BAC63F /* CalendarViewController.m in Sources */,
+				4599E33A1A6EC23C0029B065 /* RestaurantListDelegate.java in Sources */,
 				5528BCD61A6B9BDB00BAC63F /* AppDelegate.m in Sources */,
 				5528BC891A6B80E000BAC63F /* main.m in Sources */,
 				5528BCD71A6B9BDB00BAC63F /* DataController.m in Sources */,
+				4599E33C1A6EC23C0029B065 /* RestaurantListDispatch.java in Sources */,
+				4599E3371A6EC23C0029B065 /* RestaurantDetailDelegate.java in Sources */,
+				4599E33D1A6EC23C0029B065 /* Calendar.java in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -376,11 +431,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/kurtheiligmann/j2objc-0.9.5/include",
+					"${J2OBJC_DIST}/include",
+					"${DERIVED_FILES_DIR}",
 				);
 				INFOPLIST_FILE = FoodTruckr/Info.plist;
+				J2OBJC_DIST = "/Users/kurt/j2objc-0.9.5";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "/Users/kurtheiligmann/j2objc-0.9.5/lib";
+				LIBRARY_SEARCH_PATHS = "${J2OBJC_DIST}/lib";
+				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -392,11 +450,14 @@
 				HEADER_SEARCH_PATHS = (
 					"$(inherited)",
 					/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include,
-					"/Users/kurtheiligmann/j2objc-0.9.5/include",
+					"${J2OBJC_DIST}/include",
+					"${DERIVED_FILES_DIR}",
 				);
 				INFOPLIST_FILE = FoodTruckr/Info.plist;
+				J2OBJC_DIST = "/Users/kurt/j2objc-0.9.5";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = "/Users/kurtheiligmann/j2objc-0.9.5/lib";
+				LIBRARY_SEARCH_PATHS = "${J2OBJC_DIST}/lib";
+				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -454,6 +515,7 @@
 				5528BCA81A6B80E100BAC63F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		5528BCA91A6B80E100BAC63F /* Build configuration list for PBXNativeTarget "FoodTruckrTests" */ = {
 			isa = XCConfigurationList;
@@ -462,6 +524,7 @@
 				5528BCAB1A6B80E100BAC63F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
