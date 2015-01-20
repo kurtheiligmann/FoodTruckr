@@ -2,8 +2,8 @@ package com.brianjmelton.foodtruckr.list;
 
 import com.brianjmelton.foodtruckr.R;
 import com.brianjmelton.foodtruckr.conf.Constants;
-import com.brianjmelton.foodtruckr.shared.vo.Calendar;
-import com.brianjmelton.foodtruckr.shared.vo.Restaurant;
+import com.brianjmelton.foodtruckr.shared.Calendar;
+import com.brianjmelton.foodtruckr.shared.Restaurant;
 import com.squareup.picasso.Picasso;
 
 import android.content.Context;
