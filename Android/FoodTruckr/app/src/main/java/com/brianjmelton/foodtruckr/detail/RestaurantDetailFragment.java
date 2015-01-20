@@ -2,10 +2,10 @@ package com.brianjmelton.foodtruckr.detail;
 
 import com.brianjmelton.foodtruckr.R;
 import com.brianjmelton.foodtruckr.log.LoggingEnabled;
-import com.brianjmelton.foodtruckr.shared.detail.RestaurantDetailDelegate;
-import com.brianjmelton.foodtruckr.shared.detail.RestaurantDetailDispatch;
-import com.brianjmelton.foodtruckr.shared.vo.Calendar;
-import com.brianjmelton.foodtruckr.shared.vo.Restaurant;
+import com.brianjmelton.foodtruckr.shared.RestaurantDetailDelegate;
+import com.brianjmelton.foodtruckr.shared.RestaurantDetailDispatch;
+import com.brianjmelton.foodtruckr.shared.Calendar;
+import com.brianjmelton.foodtruckr.shared.Restaurant;
 import com.brianjmelton.foodtruckr.view.AbstractViews;
 import com.squareup.picasso.Picasso;
 

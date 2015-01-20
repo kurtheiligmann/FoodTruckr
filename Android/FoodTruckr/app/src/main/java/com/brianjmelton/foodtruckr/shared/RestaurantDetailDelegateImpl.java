@@ -1,4 +1,4 @@
-package com.brianjmelton.foodtruckr.shared.detail;
+package com.brianjmelton.foodtruckr.shared;
 
 /**
  * Created by brianmelton on 1/16/15.

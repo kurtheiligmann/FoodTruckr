@@ -9,5 +9,5 @@ import retrofit.http.GET;
 public interface Calendar {
 
     @GET("/food-truckr/static/trucks.json")
-    public void getCalendar(Callback<com.brianjmelton.foodtruckr.shared.vo.Calendar> days);
+    public void getCalendar(Callback<com.brianjmelton.foodtruckr.shared.Calendar> days);
 }

@@ -1,4 +1,4 @@
-package com.brianjmelton.foodtruckr.shared.vo;
+package com.brianjmelton.foodtruckr.shared;
 
 import java.io.Serializable;
 
