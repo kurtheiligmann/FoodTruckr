@@ -38,7 +38,7 @@
 				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.h",
 				"${DERIVED_FILES_DIR}/${INPUT_FILE_BASE}.m",
 			);
-			script = "cd /Users/kurt/Documents/Projects/FoodTruckr/Android/FoodTruckr/app/src/main/java/; \\\n/Users/kurt/j2objc-0.9.5/j2objc -use-arc --prefix com.brianjmelton.foodtruckr.shared=FTR -d ${DERIVED_FILES_DIR} -sourcepath com/brianjmelton/foodtruckr/shared/\\*.java --no-package-directories ${INPUT_FILE_PATH};";
+			script = "cd ${JAVA_SOURCE};\n${J2OBJC_DIST}/j2objc -use-arc --prefix ${SHARED_PACKAGE_NAME}=${J2OBJC_PREFIX} -d ${DERIVED_FILES_DIR} -sourcepath ${SHARED_PACKAGE_DIR}/\\*.java --no-package-directories ${INPUT_FILE_PATH};";
 		};
 /* End PBXBuildRule section */
 
@@ -445,10 +445,14 @@
 				);
 				INFOPLIST_FILE = FoodTruckr/Info.plist;
 				J2OBJC_DIST = "/Users/kurt/j2objc-0.9.5";
+				J2OBJC_PREFIX = FTR;
+				JAVA_SOURCE = /Users/kurt/Documents/Projects/FoodTruckr/Android/FoodTruckr/app/src/main/java/;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "${J2OBJC_DIST}/lib";
 				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PACKAGE_DIR = com/brianjmelton/foodtruckr/shared;
+				SHARED_PACKAGE_NAME = com.brianjmelton.foodtruckr.shared;
 			};
 			name = Debug;
 		};
@@ -464,10 +468,14 @@
 				);
 				INFOPLIST_FILE = FoodTruckr/Info.plist;
 				J2OBJC_DIST = "/Users/kurt/j2objc-0.9.5";
+				J2OBJC_PREFIX = FTR;
+				JAVA_SOURCE = /Users/kurt/Documents/Projects/FoodTruckr/Android/FoodTruckr/app/src/main/java/;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "${J2OBJC_DIST}/lib";
 				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SHARED_PACKAGE_DIR = com/brianjmelton/foodtruckr/shared;
+				SHARED_PACKAGE_NAME = com.brianjmelton.foodtruckr.shared;
 			};
 			name = Release;
 		};
