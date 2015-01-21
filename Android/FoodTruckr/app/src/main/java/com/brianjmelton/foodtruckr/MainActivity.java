@@ -3,13 +3,13 @@ package com.brianjmelton.foodtruckr;
 import com.brianjmelton.foodtruckr.detail.RestaurantDetailFragment;
 import com.brianjmelton.foodtruckr.list.RestaurantListFragment;
 import com.brianjmelton.foodtruckr.log.LoggingEnabled;
+import com.brianjmelton.foodtruckr.shared.Calendar;
 import com.brianjmelton.foodtruckr.shared.RestaurantDetailDelegate;
 import com.brianjmelton.foodtruckr.shared.RestaurantDetailDelegateImpl;
 import com.brianjmelton.foodtruckr.shared.RestaurantDetailDispatch;
 import com.brianjmelton.foodtruckr.shared.RestaurantListDelegate;
 import com.brianjmelton.foodtruckr.shared.RestaurantListDelegateImpl;
 import com.brianjmelton.foodtruckr.shared.RestaurantListDispatch;
-import com.brianjmelton.foodtruckr.shared.Calendar;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -25,14 +25,29 @@ import static com.brianjmelton.foodtruckr.conf.Constants.TUESDAY;
 import static com.brianjmelton.foodtruckr.conf.Constants.WEDNESDAY;
 
 
+/**
+ * Central {@link android.app.Activity} - uses the single Activity, multi-{@link
+ * android.app.Fragment} pattern
+ *
+ * @author brianmelton
+ */
 public class MainActivity extends Activity implements RestaurantListFragment.Binder,
         RestaurantDetailDelegate, RestaurantListDispatch, RestaurantDetailFragment.Binder,
         LoggingEnabled {
 
+    /**
+     * Shared delegate for RestaurantList events
+     */
     protected RestaurantListDelegate mRestaurantListDelegate = new RestaurantListDelegateImpl(this);
 
+    /**
+     * Shared delegate for RestaurantDetail events
+     */
     protected RestaurantDetailDelegate mRestaurantDetailDelegate;
 
+    /**
+     * Shared Calendar vo
+     */
     protected Calendar mCalendar;
 
     @Override
