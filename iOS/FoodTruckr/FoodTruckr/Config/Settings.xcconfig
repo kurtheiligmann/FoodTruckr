@@ -1,0 +1,22 @@
+//
+//  Settings.xcconfig
+//  FoodTruckr
+//
+//  Created by Kurt Heiligmann on 1/20/15.
+//  Copyright (c) 2015 Kurt. All rights reserved.
+//
+
+//location of the J2ObjC package
+J2OBJC_DIST=/Users/kurtheiligmann/j2objc-0.9.5;
+
+//loaction of the java source
+JAVA_SOURCE=/Users/kurtheiligmann/Documents/Projects/FoodTruckr/Android/FoodTruckr/app/src/main/java/;
+
+//translated class prefix
+J2OBJC_PREFIX=FTR;
+
+//java package folder structure
+SHARED_PACKAGE_DIR=com/brianjmelton/foodtruckr/shared;
+
+//java package name
+SHARED_PACKAGE_NAME=com.brianjmelton.foodtruckr.shared

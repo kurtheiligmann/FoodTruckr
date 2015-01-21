@@ -79,6 +79,7 @@
 		5528BCBF1A6B9BDB00BAC63F /* DataController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DataController.m; sourceTree = "<group>"; };
 		5528BCD41A6B9BDB00BAC63F /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		5528BCD51A6B9BDB00BAC63F /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
+		552D0D431A6F793C00451C35 /* Settings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Settings.xcconfig; path = FoodTruckr/Config/Settings.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,11 +122,10 @@
 		5528BC7A1A6B80E000BAC63F = {
 			isa = PBXGroup;
 			children = (
-				4599E32D1A6EC1BA0029B065 /* libicucore.dylib */,
-				4599E32B1A6EC1AC0029B065 /* Security.framework */,
-				4599E3291A6EC1A50029B065 /* libz.dylib */,
+				552D0D431A6F793C00451C35 /* Settings.xcconfig */,
 				5528BC851A6B80E000BAC63F /* FoodTruckr */,
 				5528BC9F1A6B80E100BAC63F /* FoodTruckrTests */,
+				552D0D411A6F78E900451C35 /* Frameworks */,
 				5528BC841A6B80E000BAC63F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -199,6 +199,16 @@
 			);
 			name = ViewControllers;
 			path = Classes/ViewControllers;
+			sourceTree = "<group>";
+		};
+		552D0D411A6F78E900451C35 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4599E32D1A6EC1BA0029B065 /* libicucore.dylib */,
+				4599E3291A6EC1A50029B065 /* libz.dylib */,
+				4599E32B1A6EC1AC0029B065 /* Security.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -357,6 +367,7 @@
 /* Begin XCBuildConfiguration section */
 		5528BCA41A6B80E100BAC63F /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 552D0D431A6F793C00451C35 /* Settings.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -444,15 +455,10 @@
 					"${DERIVED_FILES_DIR}",
 				);
 				INFOPLIST_FILE = FoodTruckr/Info.plist;
-				J2OBJC_DIST = "/Users/kurt/j2objc-0.9.5";
-				J2OBJC_PREFIX = FTR;
-				JAVA_SOURCE = /Users/kurt/Documents/Projects/FoodTruckr/Android/FoodTruckr/app/src/main/java/;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "${J2OBJC_DIST}/lib";
 				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SHARED_PACKAGE_DIR = com/brianjmelton/foodtruckr/shared;
-				SHARED_PACKAGE_NAME = com.brianjmelton.foodtruckr.shared;
 			};
 			name = Debug;
 		};
@@ -467,15 +473,10 @@
 					"${DERIVED_FILES_DIR}",
 				);
 				INFOPLIST_FILE = FoodTruckr/Info.plist;
-				J2OBJC_DIST = "/Users/kurt/j2objc-0.9.5";
-				J2OBJC_PREFIX = FTR;
-				JAVA_SOURCE = /Users/kurt/Documents/Projects/FoodTruckr/Android/FoodTruckr/app/src/main/java/;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				LIBRARY_SEARCH_PATHS = "${J2OBJC_DIST}/lib";
 				OTHER_LDFLAGS = "-ljre_emul";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SHARED_PACKAGE_DIR = com/brianjmelton/foodtruckr/shared;
-				SHARED_PACKAGE_NAME = com.brianjmelton.foodtruckr.shared;
 			};
 			name = Release;
 		};
