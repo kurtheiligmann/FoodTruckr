@@ -26,10 +26,16 @@ import retrofit.client.Response;
 
 /**
  * Created by brianmelton on 1/16/15.
+ *
+ * This {@link android.app.Fragment} displays the list of available {@link
+ * com.brianjmelton.foodtruckr.shared.Restaurant}s for the current week
  */
 public class RestaurantListFragment extends Fragment
         implements Callback<com.brianjmelton.foodtruckr.shared.Calendar>, LoggingEnabled {
 
+    /**
+     * {@link android.app.Fragment} binder interface
+     */
     protected Binder mBinder;
 
     /**
@@ -37,10 +43,19 @@ public class RestaurantListFragment extends Fragment
      */
     protected class Views extends AbstractViews {
 
+        /**
+         * The list of {@link com.brianjmelton.foodtruckr.shared.Restaurant}s
+         */
         protected RecyclerView mRecyclerView;
 
+        /**
+         * The Adapter for mRecyclerView
+         */
         protected RecyclerView.Adapter mAdapter;
 
+        /**
+         * The LayoutManager to measure and position Restaurant Views
+         */
         protected RecyclerView.LayoutManager mLayoutManager;
 
         @Override
@@ -67,7 +82,11 @@ public class RestaurantListFragment extends Fragment
 
     }
 
+    /**
+     * Constructs a new instance of this Fragment
+     */
     public RestaurantListFragment() {
+        // Mandatory empty constructor
     }
 
     @Override
