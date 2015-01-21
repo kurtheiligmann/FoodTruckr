@@ -1,7 +1,7 @@
 package com.brianjmelton.foodtruckr.list;
 
 import com.brianjmelton.foodtruckr.R;
-import com.brianjmelton.foodtruckr.io.Calendar;
+import com.brianjmelton.foodtruckr.io.CalendarService;
 import com.brianjmelton.foodtruckr.io.RestAdapter;
 import com.brianjmelton.foodtruckr.log.LoggingEnabled;
 import com.brianjmelton.foodtruckr.shared.RestaurantListDelegate;
@@ -100,7 +100,7 @@ public class RestaurantListFragment extends Fragment
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
         // Now that we a View to shove data into, load that data
-        RestAdapter.getInstance().create(Calendar.class).getCalendar(this);
+        RestAdapter.getInstance().create(CalendarService.class).getCalendar(this);
     }
 
     @Override
