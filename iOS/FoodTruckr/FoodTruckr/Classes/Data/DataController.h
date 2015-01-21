@@ -8,8 +8,10 @@
 
 #import <Foundation/Foundation.h>
 
+@class FTRCalendar;
+
 @interface DataController : NSObject
 
-+ (NSArray *)getFoodTrucks;
++ (FTRCalendar *)getCalendar;
 
 @end

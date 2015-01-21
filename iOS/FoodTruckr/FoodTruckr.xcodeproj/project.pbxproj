@@ -26,6 +26,8 @@
 		5528BCD61A6B9BDB00BAC63F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCBC1A6B9BDB00BAC63F /* AppDelegate.m */; };
 		5528BCD71A6B9BDB00BAC63F /* DataController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCBF1A6B9BDB00BAC63F /* DataController.m */; };
 		5528BCDD1A6B9BDB00BAC63F /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCD51A6B9BDB00BAC63F /* CalendarViewController.m */; };
+		552D0D491A6F879B00451C35 /* RestaurantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 552D0D471A6F879B00451C35 /* RestaurantCell.m */; };
+		552D0D4A1A6F879B00451C35 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552D0D481A6F879B00451C35 /* RestaurantCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -80,6 +82,9 @@
 		5528BCD41A6B9BDB00BAC63F /* CalendarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CalendarViewController.h; sourceTree = "<group>"; };
 		5528BCD51A6B9BDB00BAC63F /* CalendarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CalendarViewController.m; sourceTree = "<group>"; };
 		552D0D431A6F793C00451C35 /* Settings.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; name = Settings.xcconfig; path = FoodTruckr/Config/Settings.xcconfig; sourceTree = "<group>"; };
+		552D0D461A6F879B00451C35 /* RestaurantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestaurantCell.h; path = Classes/Views/RestaurantCell.h; sourceTree = "<group>"; };
+		552D0D471A6F879B00451C35 /* RestaurantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestaurantCell.m; path = Classes/Views/RestaurantCell.m; sourceTree = "<group>"; };
+		552D0D481A6F879B00451C35 /* RestaurantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RestaurantCell.xib; path = Classes/Views/RestaurantCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +156,7 @@
 				4599E33F1A6ECAB70029B065 /* Shared */,
 				5528BC861A6B80E000BAC63F /* Supporting Files */,
 				5528BCD31A6B9BDB00BAC63F /* ViewControllers */,
+				552D0D451A6F873E00451C35 /* Views */,
 			);
 			path = FoodTruckr;
 			sourceTree = "<group>";
@@ -209,6 +215,16 @@
 				4599E32B1A6EC1AC0029B065 /* Security.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		552D0D451A6F873E00451C35 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				552D0D461A6F879B00451C35 /* RestaurantCell.h */,
+				552D0D471A6F879B00451C35 /* RestaurantCell.m */,
+				552D0D481A6F879B00451C35 /* RestaurantCell.xib */,
+			);
+			name = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -292,6 +308,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				552D0D4A1A6F879B00451C35 /* RestaurantCell.xib in Resources */,
 				5528BC921A6B80E000BAC63F /* Main.storyboard in Resources */,
 				5528BC971A6B80E100BAC63F /* LaunchScreen.xib in Resources */,
 				5528BC941A6B80E100BAC63F /* Images.xcassets in Resources */,
@@ -317,6 +334,7 @@
 				4599E3611A6EDF030029B065 /* RestaurantDetailDispatch.java in Sources */,
 				4599E35D1A6EDF030029B065 /* Calendar.java in Sources */,
 				4599E3641A6EDF030029B065 /* RestaurantListDispatch.java in Sources */,
+				552D0D491A6F879B00451C35 /* RestaurantCell.m in Sources */,
 				5528BCDD1A6B9BDB00BAC63F /* CalendarViewController.m in Sources */,
 				5528BCD61A6B9BDB00BAC63F /* AppDelegate.m in Sources */,
 				5528BC891A6B80E000BAC63F /* main.m in Sources */,
