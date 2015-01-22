@@ -10,7 +10,7 @@
 J2OBJC_DIST=/Users/kurtheiligmann/j2objc-0.9.5;
 
 //loaction of the java source
-JAVA_SOURCE=/Users/kurtheiligmann/Documents/Projects/FoodTruckr/Android/FoodTruckr/app/src/main/java/;
+JAVA_SOURCE=../../Android/FoodTruckr/app/src/main/java/;
 
 //translated class prefix
 J2OBJC_PREFIX=FTR;
