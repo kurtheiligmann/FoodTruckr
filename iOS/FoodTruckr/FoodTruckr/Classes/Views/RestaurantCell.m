@@ -13,6 +13,7 @@
 @property (nonatomic, weak) IBOutlet UIImageView *backgroundImage;
 @property (nonatomic, weak) IBOutlet UILabel *nameLabel;
 @property (nonatomic, weak) IBOutlet UILabel *dayLabel;
+@property (nonatomic, weak) IBOutlet UILabel *cuisineLabel;
 @end
 
 @implementation RestaurantCell
@@ -23,6 +24,8 @@
     self.backgroundImage.image = [UIImage imageWithData:imageData];
     
     self.nameLabel.text = [restaurant getName];
+    self.cuisineLabel.text = [restaurant getCuisine];
+    [self.cuisineLabel sizeToFit];
 }
 
 - (NSString *)reuseIdentifier {
