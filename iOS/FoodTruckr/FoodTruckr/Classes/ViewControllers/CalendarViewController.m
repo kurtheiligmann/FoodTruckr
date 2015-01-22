@@ -161,7 +161,7 @@ typedef NS_ENUM(NSUInteger, CalendarDay) {
 #pragma mark - FTRRestaurantListDispatch
 
 - (void)onShowRestaurantDetailWithLong:(jlong)id_ {
-    self.selectedRestaurantId = id_;
+    self.selectedRestaurantId = (long)id_;
     [self performSegueWithIdentifier:kRestaurantDetailSequeIdentifier sender:self];
 }
 
