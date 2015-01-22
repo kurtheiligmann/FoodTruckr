@@ -2,10 +2,10 @@ package com.brianjmelton.foodtruckr.detail;
 
 import com.brianjmelton.foodtruckr.R;
 import com.brianjmelton.foodtruckr.log.LoggingEnabled;
-import com.brianjmelton.foodtruckr.shared.RestaurantDetailDelegate;
-import com.brianjmelton.foodtruckr.shared.RestaurantDetailDispatch;
 import com.brianjmelton.foodtruckr.shared.Calendar;
 import com.brianjmelton.foodtruckr.shared.Restaurant;
+import com.brianjmelton.foodtruckr.shared.RestaurantDetailDelegate;
+import com.brianjmelton.foodtruckr.shared.RestaurantDetailDispatch;
 import com.brianjmelton.foodtruckr.view.AbstractViews;
 import com.squareup.picasso.Picasso;
 
@@ -29,22 +29,33 @@ import java.util.Map;
 
 /**
  * Created by brianmelton on 1/16/15.
+ *
+ * The "detail" view of the Restaurant list - shows information like payment, their website, a long
+ * description, and whatever else!
  */
 public class RestaurantDetailFragment extends Fragment implements RestaurantDetailDispatch,
         LoggingEnabled {
 
-    private static final String sArgCal = "sArgCal";
-
-    private static final String sArgId = "argId";
+    /**
+     * Unique Strings to identify arguments within the {@link android.os.Bundle}
+     */
+    protected static final String sArgCal = "sArgCal";
+    protected static final String sArgId = "sArgId";
 
     protected Binder mBinder;
 
+    /**
+     * Instance of this View container
+     */
     protected Views mViews = new Views();
 
     protected Map<Long, Restaurant> mRestaurantMap;
 
     protected long mId;
 
+    /**
+     * View container for this {@link android.app.Fragment}'s {@link android.view.View}s
+     */
     protected class Views extends AbstractViews {
 
         protected ImageView mBackground;
@@ -64,6 +75,7 @@ public class RestaurantDetailFragment extends Fragment implements RestaurantDeta
     }
 
     public RestaurantDetailFragment() {
+        // Mandatory empty constructor
     }
 
     public static RestaurantDetailFragment newInstance(Calendar calendar, long id) {
@@ -192,8 +204,18 @@ public class RestaurantDetailFragment extends Fragment implements RestaurantDeta
         return LoggerFactory.getLogger(RestaurantDetailFragment.class);
     }
 
+    /**
+     * Users of this {@link android.app.Fragment} <em>must</em> implement this interface for
+     * #onAttach
+     */
     public static interface Binder extends RestaurantDetailDelegate {
 
+        /**
+         * Sets the {@link com.brianjmelton.foodtruckr.shared.RestaurantDetailDispatch} on this
+         * {@link android.app.Fragment}
+         *
+         * @param dispatch the dispatch to set
+         */
         public void setRestaurantDetailDispatch(RestaurantDetailDispatch dispatch);
     }
 }
