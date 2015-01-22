@@ -4,6 +4,7 @@ import com.brianjmelton.foodtruckr.R;
 import com.brianjmelton.foodtruckr.io.CalendarService;
 import com.brianjmelton.foodtruckr.io.RestAdapter;
 import com.brianjmelton.foodtruckr.log.LoggingEnabled;
+import com.brianjmelton.foodtruckr.shared.Calendar;
 import com.brianjmelton.foodtruckr.shared.RestaurantListDelegate;
 import com.brianjmelton.foodtruckr.view.AbstractViews;
 
@@ -41,7 +42,7 @@ public class RestaurantListFragment extends Fragment
     /**
      * The {@link View}s managed by this {@link android.app.Fragment}
      */
-    protected class Views extends AbstractViews {
+    protected class Views extends AbstractViews implements LoggingEnabled {
 
         /**
          * The list of {@link com.brianjmelton.foodtruckr.shared.Restaurant}s
@@ -60,6 +61,7 @@ public class RestaurantListFragment extends Fragment
 
         @Override
         protected View initialize(View layout) {
+            getLogger().info("^initialize(layout={})", layout);
             mRecyclerView = (RecyclerView) layout.findViewById(R.id.list_recycler_view);
 
             // use this setting to improve performance if you know that changes
@@ -76,10 +78,14 @@ public class RestaurantListFragment extends Fragment
             );
 
             // TODO show a spinner while you wait!
-
+            getLogger().info("^initialize(layout={}) : {}", layout, layout);
             return layout;
         }
 
+        @Override
+        public Logger getLogger() {
+            return LoggerFactory.getLogger(Views.class);
+        }
     }
 
     /**
@@ -92,28 +98,41 @@ public class RestaurantListFragment extends Fragment
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+        getLogger().info("^onCreateView(inflater={}, container={}, savedInstanceState={})",
+                new Object[]{inflater, container, savedInstanceState});
         View rootView = inflater.inflate(R.layout.fragment_list, container, false);
-        return mViews.initialize(rootView);
+        mViews.initialize(rootView);
+        getLogger().info("$onCreateView(inflater={}, container={}, savedInstanceState={}) : {}",
+                new Object[]{inflater, container, savedInstanceState, rootView});
+        return rootView;
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
+        getLogger()
+                .info("^onViewCreated(view={}, savedInstanceState={})", view, savedInstanceState);
         super.onViewCreated(view, savedInstanceState);
         // Now that we a View to shove data into, load that data
         RestAdapter.getInstance().create(CalendarService.class).getCalendar(this);
+        getLogger()
+                .info("$onViewCreated(view={}, savedInstanceState={})", view, savedInstanceState);
     }
 
     @Override
     public void onAttach(Activity activity) {
+        getLogger().info("^onAttach(activity={})", activity);
         super.onAttach(activity);
         mBinder = (Binder) activity;
+        getLogger().info("$onAttach(activity={})", activity);
     }
 
     @Override
     public void onResume() {
+        getLogger().info("^onResume()");
         super.onResume();
         setHasOptionsMenu(false);
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(false);
+        getLogger().info("$onResume()");
     }
 
     @Override
@@ -125,16 +144,19 @@ public class RestaurantListFragment extends Fragment
     // Network I/O
     //
     @Override
-    public void success(com.brianjmelton.foodtruckr.shared.Calendar calendar,
-            Response response) {
+    public void success(Calendar calendar, Response response) {
+        getLogger().info("^success(calendar={}, response={})", calendar, response);
         mBinder.setCalendar(calendar);
         mViews.mAdapter = new RestaurantListAdapter(calendar);
         mViews.mRecyclerView.setAdapter(mViews.mAdapter);
+        getLogger().info("$success(calendar={}, response={})", calendar, response);
     }
 
     @Override
     public void failure(RetrofitError error) {
         // TODO show an error
+        getLogger().error("^failure(error={})", error);
+        getLogger().error("$failure(error={})", error);
     }
 
     //

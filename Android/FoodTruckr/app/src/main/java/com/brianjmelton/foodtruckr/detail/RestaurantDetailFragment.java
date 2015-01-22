@@ -54,21 +54,27 @@ public class RestaurantDetailFragment extends Fragment implements RestaurantDeta
     /**
      * View container for this {@link android.app.Fragment}'s {@link android.view.View}s
      */
-    protected class Views extends AbstractViews {
+    protected class Views extends AbstractViews implements LoggingEnabled {
 
         protected ImageView mBackground;
 
         protected TextView mName, mTime, mLongDescription, mWebsite;
 
-
         @Override
         protected View initialize(View layout) {
+            getLogger().info("^initialize(layout={})", layout);
             mBackground = (ImageView) layout.findViewById(R.id.detail_background);
             mName = (TextView) layout.findViewById(R.id.detail_name);
             mTime = (TextView) layout.findViewById(R.id.detail_time);
             mLongDescription = (TextView) layout.findViewById(R.id.detail_longdescription);
             mWebsite = (TextView) layout.findViewById(R.id.detail_website);
+            getLogger().info("$initialize(layout={}) : {}", layout, layout);
             return layout;
+        }
+
+        @Override
+        public Logger getLogger() {
+            return LoggerFactory.getLogger(Views.class);
         }
     }
 
@@ -87,52 +93,76 @@ public class RestaurantDetailFragment extends Fragment implements RestaurantDeta
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
+        getLogger().info("^onCreate(savedInstanceState={})", savedInstanceState);
         super.onCreate(savedInstanceState);
         if (null != getArguments()) {
             mCalendar = (Calendar) getArguments().getSerializable(sArgCal);
             mId = getArguments().getLong(sArgId);
         }
+        getLogger().info("$onCreate(savedInstanceState={})", savedInstanceState);
     }
 
     @Override
     public void onAttach(Activity activity) {
+        getLogger().info("^onAttach(activity={})");
         super.onAttach(activity);
         mBinder = (Binder) activity;
         mBinder.setRestaurantDetailDispatch(this);
+        getLogger().info("$onAttach(activity={})");
     }
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
             Bundle savedInstanceState) {
+        getLogger().info("^onCreateView(inflater={}, container={}, savedInstanceState={})",
+                new Object[]{inflater, container, savedInstanceState});
         View rootView = inflater.inflate(R.layout.layout_detail_view, container, false);
+        getLogger().info("$onCreateView(inflater={}, container={}, savedInstanceState={}) : {}",
+                new Object[]{inflater, container, savedInstanceState, rootView});
         return mViews.initialize(rootView);
     }
 
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
+        getLogger()
+                .info("^onViewCreated(view={}, savedInstanceState={})", view, savedInstanceState);
         super.onViewCreated(view, savedInstanceState);
         mBinder.onRestaurantDetailShown(mId);
+        getLogger()
+                .info("$onViewCreated(view={}, savedInstanceState={})", view, savedInstanceState);
     }
 
     @Override
     public void onResume() {
+        getLogger().info("^onResume()");
         super.onResume();
         setHasOptionsMenu(true);
         getActivity().getActionBar().setDisplayHomeAsUpEnabled(true);
+        getLogger().info("$onResume()");
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
+        getLogger().info("^onOptionsItemSelected(item={})", item);
+        boolean handled = false;
         switch (item.getItemId()) {
             case android.R.id.home:
                 getActivity().onBackPressed();
-                return true;
+                handled = true;
         }
-        return super.onOptionsItemSelected(item);
+
+        if (!handled) {
+            handled = super.onOptionsItemSelected(item);
+        }
+        getLogger().info("$onOptionsItemSelected(item={}) : {}", item, handled);
+        return handled;
     }
 
     private Restaurant forId(long id) {
-        return mCalendar.getRestaurantForId(id);
+        getLogger().info("^forId(id={})", id);
+        Restaurant restaurant = mCalendar.getRestaurantForId(id);
+        getLogger().info("$forId(id={}) : {}", id, restaurant);
+        return restaurant;
     }
 
     @Override
