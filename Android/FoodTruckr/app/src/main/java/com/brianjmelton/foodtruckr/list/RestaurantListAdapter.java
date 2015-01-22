@@ -22,12 +22,20 @@ import static com.brianjmelton.foodtruckr.conf.Constants.WEDNESDAY;
 
 /**
  * Created by brianmelton on 1/17/15.
+ *
+ * The ViewAdapter for the RestaurantList - uses the spiffy new RecyclerView for efficient
+ * allocation of new views
  */
 public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAdapter.ViewHolder> {
 
+    /**
+     * The ViewHolder acts as a programmatic representation of the xml view
+     */
+    class ViewHolder extends RecyclerView.ViewHolder {
 
-    public static class ViewHolder extends RecyclerView.ViewHolder {
-
+        /**
+         * The background img of the {@link com.brianjmelton.foodtruckr.shared.Restaurant}
+         */
         public ImageView mBackground;
 
         public TextView mLargeLabel, mSmallLabel, mCardText;
@@ -42,6 +50,7 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
     }
 
     protected Context mContext;
+
     protected Calendar mCalendar;
 
     public RestaurantListAdapter(Calendar calendar) {
@@ -67,6 +76,7 @@ public class RestaurantListAdapter extends RecyclerView.Adapter<RestaurantListAd
         Restaurant which;
         String dayName;
 
+        // FIXME yuck!
         switch (i) {
             case MONDAY:
                 which = mCalendar.getMonday();
