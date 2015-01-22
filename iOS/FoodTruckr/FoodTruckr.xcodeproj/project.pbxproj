@@ -28,6 +28,7 @@
 		5528BCDD1A6B9BDB00BAC63F /* CalendarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5528BCD51A6B9BDB00BAC63F /* CalendarViewController.m */; };
 		552D0D491A6F879B00451C35 /* RestaurantCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 552D0D471A6F879B00451C35 /* RestaurantCell.m */; };
 		552D0D4A1A6F879B00451C35 /* RestaurantCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 552D0D481A6F879B00451C35 /* RestaurantCell.xib */; };
+		552DCD601A70B52A004B4180 /* RestaurantViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 552DCD5F1A70B52A004B4180 /* RestaurantViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXBuildRule section */
@@ -85,6 +86,8 @@
 		552D0D461A6F879B00451C35 /* RestaurantCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RestaurantCell.h; path = Classes/Views/RestaurantCell.h; sourceTree = "<group>"; };
 		552D0D471A6F879B00451C35 /* RestaurantCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RestaurantCell.m; path = Classes/Views/RestaurantCell.m; sourceTree = "<group>"; };
 		552D0D481A6F879B00451C35 /* RestaurantCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = RestaurantCell.xib; path = Classes/Views/RestaurantCell.xib; sourceTree = "<group>"; };
+		552DCD5E1A70B52A004B4180 /* RestaurantViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RestaurantViewController.h; sourceTree = "<group>"; };
+		552DCD5F1A70B52A004B4180 /* RestaurantViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RestaurantViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -202,6 +205,8 @@
 			children = (
 				5528BCD41A6B9BDB00BAC63F /* CalendarViewController.h */,
 				5528BCD51A6B9BDB00BAC63F /* CalendarViewController.m */,
+				552DCD5E1A70B52A004B4180 /* RestaurantViewController.h */,
+				552DCD5F1A70B52A004B4180 /* RestaurantViewController.m */,
 			);
 			name = ViewControllers;
 			path = Classes/ViewControllers;
@@ -334,6 +339,7 @@
 				4599E3611A6EDF030029B065 /* RestaurantDetailDispatch.java in Sources */,
 				4599E35D1A6EDF030029B065 /* Calendar.java in Sources */,
 				4599E3641A6EDF030029B065 /* RestaurantListDispatch.java in Sources */,
+				552DCD601A70B52A004B4180 /* RestaurantViewController.m in Sources */,
 				552D0D491A6F879B00451C35 /* RestaurantCell.m in Sources */,
 				5528BCDD1A6B9BDB00BAC63F /* CalendarViewController.m in Sources */,
 				5528BCD61A6B9BDB00BAC63F /* AppDelegate.m in Sources */,

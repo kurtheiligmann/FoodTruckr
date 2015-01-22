@@ -30,38 +30,41 @@ static NSString * const kFriday = @"friday";
 @implementation DataController
 
 + (FTRCalendar *)getCalendar {
-    NSData *calendarData = [NSData dataWithContentsOfURL:[NSURL URLWithString:kTruckListAddress]];
-    NSDictionary *parsedCalendar = [NSJSONSerialization JSONObjectWithData:calendarData options:kNilOptions error:nil];
-    NSLog(@"%@", parsedCalendar);
-    
-    FTRCalendar *calendar = [[FTRCalendar alloc] init];
-    for (NSString *day in [parsedCalendar allKeys]) {
-        NSDictionary *restaurantValues = parsedCalendar[day];
-        FTRRestaurant *restaurant = [[FTRRestaurant alloc] init];
-        [restaurant setBackgroundWithNSString:restaurantValues[kBackgroundKey]];
-        [restaurant setCuisineWithNSString:restaurantValues[kCuisineKey]];
-        [restaurant setIdWithLong:[restaurantValues[kIdKey] longValue]];
-        [restaurant setLinkWithNSString:restaurantValues[kLinkKey]];
-        [restaurant setLogoWithNSString:restaurantValues[kLogoKey]];
-        [restaurant setLongDescriptionWithNSString:restaurantValues[kLongDescriptionKey]];
-        [restaurant setShortDescriptionWithNSString:restaurantValues[kShortDescriptionKey]];
-        [restaurant setNameWithNSString:restaurantValues[kNameKey]];
-        [restaurant setPaymentWithNSString:restaurantValues[kPaymentKey]];
+    static FTRCalendar *_calendar = nil;
+    if (_calendar == nil) {
+        NSData *calendarData = [NSData dataWithContentsOfURL:[NSURL URLWithString:kTruckListAddress]];
+        NSDictionary *parsedCalendar = [NSJSONSerialization JSONObjectWithData:calendarData options:kNilOptions error:nil];
+        NSLog(@"%@", parsedCalendar);
         
-        if ([[day lowercaseString] isEqualToString:kMonday]) {
-            [calendar setMondayWithFTRRestaurant:restaurant];
-        } else if ([[day lowercaseString] isEqualToString:kTuesday]) {
-            [calendar setTuesdayWithFTRRestaurant:restaurant];
-        } else if ([[day lowercaseString] isEqualToString:kWednesday]) {
-            [calendar setWednesdayWithFTRRestaurant:restaurant];
-        } else if ([[day lowercaseString] isEqualToString:kThursday]) {
-            [calendar setThursdayWithFTRRestaurant:restaurant];
-        } else if ([[day lowercaseString] isEqualToString:kFriday]) {
-            [calendar setFridayWithFTRRestaurant:restaurant];
+        _calendar = [[FTRCalendar alloc] init];
+        for (NSString *day in [parsedCalendar allKeys]) {
+            NSDictionary *restaurantValues = parsedCalendar[day];
+            FTRRestaurant *restaurant = [[FTRRestaurant alloc] init];
+            [restaurant setBackgroundWithNSString:restaurantValues[kBackgroundKey]];
+            [restaurant setCuisineWithNSString:restaurantValues[kCuisineKey]];
+            [restaurant setIdWithLong:[restaurantValues[kIdKey] longValue]];
+            [restaurant setLinkWithNSString:restaurantValues[kLinkKey]];
+            [restaurant setLogoWithNSString:restaurantValues[kLogoKey]];
+            [restaurant setLongDescriptionWithNSString:restaurantValues[kLongDescriptionKey]];
+            [restaurant setShortDescriptionWithNSString:restaurantValues[kShortDescriptionKey]];
+            [restaurant setNameWithNSString:restaurantValues[kNameKey]];
+            [restaurant setPaymentWithNSString:restaurantValues[kPaymentKey]];
+            
+            if ([[day lowercaseString] isEqualToString:kMonday]) {
+                [_calendar setMondayWithFTRRestaurant:restaurant];
+            } else if ([[day lowercaseString] isEqualToString:kTuesday]) {
+                [_calendar setTuesdayWithFTRRestaurant:restaurant];
+            } else if ([[day lowercaseString] isEqualToString:kWednesday]) {
+                [_calendar setWednesdayWithFTRRestaurant:restaurant];
+            } else if ([[day lowercaseString] isEqualToString:kThursday]) {
+                [_calendar setThursdayWithFTRRestaurant:restaurant];
+            } else if ([[day lowercaseString] isEqualToString:kFriday]) {
+                [_calendar setFridayWithFTRRestaurant:restaurant];
+            }
         }
     }
-
-    return calendar;
+    
+    return _calendar;
 }
 
 @end
