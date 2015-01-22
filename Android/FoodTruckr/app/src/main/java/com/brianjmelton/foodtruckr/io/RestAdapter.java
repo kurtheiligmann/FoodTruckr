@@ -8,6 +8,8 @@ import retrofit.converter.GsonConverter;
 
 /**
  * Created by brianmelton on 1/16/15.
+ *
+ * Singleton representation of a {@link retrofit.RestAdapter}
  */
 public class RestAdapter {
 
