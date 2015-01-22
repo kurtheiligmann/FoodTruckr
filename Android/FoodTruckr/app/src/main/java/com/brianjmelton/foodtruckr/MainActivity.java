@@ -52,6 +52,7 @@ public class MainActivity extends Activity implements RestaurantListFragment.Bin
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
+        getLogger().info("^onCreate(savedInstanceState={})", savedInstanceState);
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         if (savedInstanceState == null) {
@@ -59,54 +60,70 @@ public class MainActivity extends Activity implements RestaurantListFragment.Bin
                     .add(R.id.container, new RestaurantListFragment())
                     .commit();
         }
+        getLogger().info("$onCreate(savedInstanceState={})", savedInstanceState);
     }
 
     @Override
     public void onRestaurantClicked(long id) {
+        getLogger().info("^onRestaurantClicked(id={})", id);
         mRestaurantListDelegate.onRestaurantClicked(id);
+        getLogger().info("$onRestaurantClicked(id={})", id);
     }
 
     @Override
     public void setRestaurantDetailDispatch(RestaurantDetailDispatch dispatch) {
+        getLogger().info("^setRestaurantDetailDispatch(dispatch={})", dispatch);
         mRestaurantDetailDelegate = new RestaurantDetailDelegateImpl(dispatch);
+        getLogger().info("$setRestaurantDetailDispatch(dispatch={})", dispatch);
     }
 
     @Override
     public void onRestaurantDetailShown(long id) {
+        getLogger().info("^onRestaurantDetailShown(id={})", id);
         mRestaurantDetailDelegate.onRestaurantDetailShown(id);
+        getLogger().info("$onRestaurantDetailShown(id={})", id);
     }
 
     @Override
     public void onShowRestaurantDetail(long id) {
         // do a FragmentTransaction
+        getLogger().info("^onShowRestaurantDetail(id)", id);
         getFragmentManager().beginTransaction()
                 .replace(R.id.container, RestaurantDetailFragment.newInstance(mCalendar, id))
                 .addToBackStack(null).commit();
+        getLogger().info("$onShowRestaurantDetail(id)", id);
     }
 
     @Override
     public void onBackPressed() {
+        getLogger().info("^onBackPressed()");
         if (getFragmentManager().getBackStackEntryCount() != 0) {
             getFragmentManager().popBackStack();
         } else {
             super.onBackPressed();
         }
+        getLogger().info("$onBackPressed()");
     }
 
 
     @Override
     public void setCalendar(Calendar calendar) {
+        getLogger().info("^setCalendar(calendar={})", calendar);
         mCalendar = calendar;
+        getLogger().info("$setCalendar(calendar={})", calendar);
     }
 
     @Override
     public Calendar getCalendar() {
+        getLogger().info("^getCalendar()");
+        getLogger().info("$getCalendar() : {}", mCalendar);
         return mCalendar;
     }
 
     @Override
     public void onItemClick(View view, int position) {
         // FIXME this isn't great, but I had made the JSON cleaner it wouldn't be like this
+        getLogger().info("^onItemClick(view={}, position={})", view, position);
         long whichId;
         switch (position) {
             case MONDAY:
@@ -130,6 +147,7 @@ public class MainActivity extends Activity implements RestaurantListFragment.Bin
 
         getLogger().info("User clicked {}", whichId);
         onRestaurantClicked(whichId);
+        getLogger().info("$onItemClick(view={}, position={})", view, position);
     }
 
     @Override
