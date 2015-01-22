@@ -57,6 +57,18 @@ public class Calendar implements Serializable {
         this.friday = friday;
     }
 
+    public Restaurant getRestaurantForId(final long id) {
+        Restaurant result = null;
+        Restaurant[] restaurants = {monday, tuesday, wednesday, thursday, friday};
+        for (Restaurant restaurant : restaurants) {
+            if (null != restaurant && id == restaurant.getId()) {
+                result = restaurant;
+                break;
+            }
+        }
+        return result;
+    }
+
     @Override
     public String toString() {
         final StringBuilder sb = new StringBuilder("Calendar{");

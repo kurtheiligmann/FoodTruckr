@@ -24,9 +24,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import java.util.HashMap;
-import java.util.Map;
-
 /**
  * Created by brianmelton on 1/16/15.
  *
@@ -40,16 +37,17 @@ public class RestaurantDetailFragment extends Fragment implements RestaurantDeta
      * Unique Strings to identify arguments within the {@link android.os.Bundle}
      */
     protected static final String sArgCal = "sArgCal";
+
     protected static final String sArgId = "sArgId";
 
     protected Binder mBinder;
+
+    protected Calendar mCalendar;
 
     /**
      * Instance of this View container
      */
     protected Views mViews = new Views();
-
-    protected Map<Long, Restaurant> mRestaurantMap;
 
     protected long mId;
 
@@ -91,14 +89,7 @@ public class RestaurantDetailFragment extends Fragment implements RestaurantDeta
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (null != getArguments()) {
-            final Calendar calendar = (Calendar) getArguments().getSerializable(sArgCal);
-            mRestaurantMap = new HashMap<Long, Restaurant>() {{
-                put(calendar.getMonday().getId(), calendar.getMonday());
-                put(calendar.getTuesday().getId(), calendar.getTuesday());
-                put(calendar.getWednesday().getId(), calendar.getWednesday());
-                put(calendar.getThursday().getId(), calendar.getThursday());
-                put(calendar.getFriday().getId(), calendar.getFriday());
-            }};
+            mCalendar = (Calendar) getArguments().getSerializable(sArgCal);
             mId = getArguments().getLong(sArgId);
         }
     }
@@ -141,7 +132,7 @@ public class RestaurantDetailFragment extends Fragment implements RestaurantDeta
     }
 
     private Restaurant forId(long id) {
-        return mRestaurantMap.get(id);
+        return mCalendar.getRestaurantForId(id);
     }
 
     @Override
